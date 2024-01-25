@@ -8,7 +8,7 @@ export default class Dwarf extends Race {
     return this._maxLifePoints;
   }
   
-  static createdRacesInstances(): number {
+  static override createdRacesInstances(): number {
     this._instanceCounter += 1;    
     return this._instanceCounter;
   }
