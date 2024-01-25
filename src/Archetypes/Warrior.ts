@@ -3,11 +3,11 @@ import Archetype from './Archetypes';
 
 export default class Warrior extends Archetype {
   private static _instanceCounter = 0;
-  private _forca: EnergyType;
+  private _stamina: EnergyType;
 
-  constructor(name: string, forca: EnergyType = 'stamina', special = 0, cost = 0) {
+  constructor(name: string, stamina: EnergyType = 'stamina', special = 0, cost = 0) {
     super(name, special, cost);
-    this._forca = forca;
+    this._stamina = stamina;
   }
 
   static override createdArchetypeInstances(): number {
@@ -16,6 +16,6 @@ export default class Warrior extends Archetype {
   }
 
   get energyType(): EnergyType {
-    return this._forca;
+    return this._stamina;
   }
 }
